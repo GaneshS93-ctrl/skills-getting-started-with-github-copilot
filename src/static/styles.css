@@ -63,6 +63,8 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  /* keep a subtle min-height so layout stays tidy */
+  min-height: 120px;
 }
 
 .activity-card h4 {
@@ -141,4 +143,117 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+/* Participants section */
+.participants {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #eee;
+}
+
+.participants h5 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #263238;
+  font-weight: 600;
+}
+
+/* Compact list with custom bullets (initial avatars) */
+.participants ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.participants li {
+  list-style: none;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #ffffff;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+  font-size: 14px;
+  color: #333;
+}
+
+.delete-participant-btn {
+  background-color: #ffc107;
+  color: #333;
+  border: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.1s;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.delete-participant-btn:hover {
+  background-color: #ffb300;
+  transform: scale(1.1);
+}
+
+.delete-participant-btn:active {
+  transform: scale(0.95);
+}
+
+/* Circular initial avatar */
+.participant-initial {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8f0fe, #d0d8ff);
+  color: #0b3d91;
+  font-weight: 700;
+  font-size: 14px;
+  flex: 0 0 32px;
+}
+
+/* Name styling */
+.participant-name {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* No participants message */
+.no-participants {
+  font-size: 13px;
+  color: #607d8b;
+  background-color: #f7f9fa;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px dashed #e1f0f6;
+  display: inline-block;
+}
+
+/* Responsive tweaks */
+@media (max-width: 520px) {
+  .participant-item {
+    gap: 8px;
+    padding: 6px;
+    font-size: 13px;
+  }
 }
