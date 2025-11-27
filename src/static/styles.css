@@ -169,9 +169,14 @@ footer {
   gap: 8px;
 }
 
+.participants li {
+  list-style: none;
+}
+
 .participant-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   background: #ffffff;
   padding: 6px 8px;
@@ -180,6 +185,34 @@ footer {
   box-shadow: 0 1px 0 rgba(0,0,0,0.02);
   font-size: 14px;
   color: #333;
+}
+
+.delete-participant-btn {
+  background-color: #ffc107;
+  color: #333;
+  border: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.1s;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.delete-participant-btn:hover {
+  background-color: #ffb300;
+  transform: scale(1.1);
+}
+
+.delete-participant-btn:active {
+  transform: scale(0.95);
 }
 
 /* Circular initial avatar */
